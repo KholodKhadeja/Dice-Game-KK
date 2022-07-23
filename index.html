@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="img/kh-logo.png">
+    <link rel="stylesheet" href="styling.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;500;700&family=Josefin+Sans&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,700&family=Nunito:wght@200;700;800&family=Quicksand:wght@300;400;600;700&family=Rubik+Bubbles&family=Rubik:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Supermercado+One&display=swap" rel="stylesheet">
+
+    <title>Dice Game</title>
+</head>
+<body>
+<div>
+    <header>
+        <img src="img/kh-logo.png" alt="logo" id="logoImg">
+        <div>   <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 icon iconbtn" viewBox="0 0 20 20" fill="currentColor">
+            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+          </svg>  </div>
+    </header>
+    <div class="MaingameContainer">
+    <!---------------------- Player 1 Container ------------------------>
+    <div class="playerContainer focusedPlayer player1">
+        <h1 class="playerNumber player1Num">
+            Player 1
+        </h1>
+       <p class="Score player1Score"></p>
+       <div class="currentScoreSum player1ScSum">
+           <span class="text">Current</span>
+           <span class="currentScoreNum player1ScoreSum"> 0 </span>
+       </div>
+    </div>
+        <!---------------------- Player 2 Container ------------------------>
+        <div class="playerContainer unfocusedPlayer player2">
+            <h1 class="playerNumber player2Num">
+                Player 2
+            </h1>
+           <p class="Score player2Score"></p>
+           <div class="currentScoreSum player2ScSum">
+               <span class="text">Current</span>
+               <span class="currentScoreNum player2ScoreSum"> 0 </span>
+           </div>
+        </div>
+        <!---------------------Middle Button Container-->
+       <div class="btnContainer">
+           <button class="newGame">🎲 New Game </button>
+           <img src="img/dice-2.png" alt="" class="diceImg">
+           <button class="RollDice">🔄 Roll Dice</button>
+           <button class="Hold">📥 Hold</button>
+       </div>
+    </div>
+
+
+    <div class="infoPopUp hidden">
+        <div class="upperDiv">
+           <h3>Instructions:</h3>
+           <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 icon iconClose"  fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg></span>
+            </div><div>
+            <p>
+            <b>1. </b>Player 1 click on Roll Dice, the result on the dice will be added to his score.<br>
+        <b>2.</b>If the player recieve <b>1</b> on the dice or if player 1 clicks on <b>Hold</b> the turn will be passed to player 2.<br>
+    <b>3.</b>The winner is the player who gets 100(or more) <b>first</b>. <br>
+<b>4.</b>By Clicking on "Hold" the score will be added to the final score and the turn will pass to the other player.  <br>
+<b>5.</b>Click on "New Game" to start a new game.
+</p>
+        </div>
+    </div>
+
+    <div class="layer hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
